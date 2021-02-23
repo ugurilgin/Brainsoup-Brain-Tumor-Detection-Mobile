@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Anasayfa" />
+        <item
+            android:id="@+id/profile"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Profili Güncelle" />
+        <item
+            android:id="@+id/addPatient"
+            android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="Hasta Ekle" />
+        <item
+            android:id="@+id/viewPatient"
+            android:icon="@android:drawable/ic_menu_search"
+            android:title="Hastaları Görüntüle" />
+        <item
+            android:id="@+id/predictMR"
+            android:icon="@android:drawable/ic_menu_upload"
+            android:title="MR İncele" />
+        <item
+            android:id="@+id/viewMR"
+            android:icon="@android:drawable/ic_menu_view"
+            android:title="MR Görüntüleri" />
+        <item
+            android:id="@+id/unsavedMR"
+            android:icon="@android:drawable/ic_menu_save"
+            android:title="Kaydedilmemiş MR" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="Çıkış Yap" />
+
+
+    </group>
+</menu>

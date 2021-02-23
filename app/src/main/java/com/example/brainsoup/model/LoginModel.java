@@ -5,6 +5,8 @@ import com.google.gson.annotations.SerializedName;
 public class LoginModel {
     @SerializedName("name")
     public String name;
+    @SerializedName("surname")
+    public String surname;
     @SerializedName("email")
     public String email;
     @SerializedName("key")
@@ -19,6 +21,15 @@ public class LoginModel {
     public void setName(String result) {
         this.name = result;
     }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String result) {
+        this.surname = result;
+    }
+
     public String getEmail() {
         return email;
     }

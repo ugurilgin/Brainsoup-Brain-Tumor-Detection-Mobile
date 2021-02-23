@@ -94,9 +94,9 @@ public class SignUp extends AppCompatActivity {
         }
         else {
             if(Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches())
-            goLogin(email.getText().toString(), password.getText().toString(), name.getText().toString(), surname.getText().toString());
+            { goLogin(email.getText().toString(), password.getText().toString(), name.getText().toString(), surname.getText().toString());name.setText("");surname.setText("");email.setText("");password.setText("");}
        else
-                Toast.makeText(SignUp.this, "Lütfen Geçerli Bir Mail Adresi Giriniz", Toast.LENGTH_SHORT).show();
+                {    Toast.makeText(SignUp.this, "Lütfen Geçerli Bir Mail Adresi Giriniz", Toast.LENGTH_SHORT).show();}
 
         }
         }

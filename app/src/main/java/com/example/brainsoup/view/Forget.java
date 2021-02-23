@@ -83,9 +83,9 @@ public  void SendMail(View view)
     email=(TextView)findViewById(R.id.email3);
     String text="forgetAPI?email="+email.getText().toString();
     if(Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches())
-        goForget(text);
+    { goForget(text); email.setText("");}
     else
-        Toast.makeText(this, "Lütfen Geçerli Bir Mail Adresi Giriniz", Toast.LENGTH_SHORT).show();
+    { Toast.makeText(this, "Lütfen Geçerli Bir Mail Adresi Giriniz", Toast.LENGTH_SHORT).show();}
 
 
 
@@ -111,6 +111,7 @@ public  void SendMail(View view)
 
                   Toast.makeText(Forget.this, myresult, Toast.LENGTH_SHORT).show();
                   progressDialog.dismiss();
+
               }
 
             }

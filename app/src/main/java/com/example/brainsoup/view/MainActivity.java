@@ -20,11 +20,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.brainsoup.R;
-import com.example.brainsoup.model.ForgetModel;
 import com.example.brainsoup.model.LoginInfo;
 import com.example.brainsoup.model.LoginModel;
 import com.example.brainsoup.model.MyURL;
-import com.example.brainsoup.service.ForgetAPI;
 import com.example.brainsoup.service.LoginAPI;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -129,12 +127,20 @@ public class MainActivity extends AppCompatActivity {
                     loginModels = new ArrayList<>(responseList);
                     String myKey = loginModels.get(0).userKey;
                     String myName = loginModels.get(0).name;
+                    String mySurname = loginModels.get(0).surname;
                     String myEmail = loginModels.get(0).email;
                     String myError = loginModels.get(0).error;
                     if (myError.equals("Success")) {
 
-                        Toast.makeText(MainActivity.this, "Giriş İşlemi Başarılı", Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
+                        Intent myIntent = new Intent(MainActivity.this, MainMenu.class);
+
+                        myIntent.putExtra("UserName", myName);
+                        myIntent.putExtra("UserSurname", mySurname);
+                        myIntent.putExtra("UserKey", myKey);
+                        myIntent.putExtra("UserEmail", myEmail);
+                        startActivity(myIntent);
+
                     }
                     else if (myError.equals("Database")) {
 

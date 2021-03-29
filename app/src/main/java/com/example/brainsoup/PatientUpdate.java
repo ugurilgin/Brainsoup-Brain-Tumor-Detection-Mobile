@@ -7,6 +7,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import br.com.sapereaude
+        .maskedEditText
+        .MaskedEditText;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,7 +31,7 @@ public class PatientUpdate extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+Spinner spinner;
     public PatientUpdate() {
         // Required empty public constructor
     }
@@ -59,6 +67,30 @@ public class PatientUpdate extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_patient_update, container, false);
+        View v = inflater.inflate(R.layout.fragment_patient_update, container, false);
+        spinner=(Spinner)v.findViewById(R.id.patientCinsiyet);
+        initspinnerfooter();
+        return  v;
+
+    }
+    private void initspinnerfooter() {
+        String[] items = new String[]{
+                "Kadın", "Erkek"
+        };
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, items);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                Toast.makeText(PatientUpdate.this.getContext(), (String) parent.getItemAtPosition(position),Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // TODO Auto-generated method stub
+            }
+        });
     }
 }

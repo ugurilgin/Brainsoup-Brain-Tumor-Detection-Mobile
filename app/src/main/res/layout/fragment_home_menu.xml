@@ -9,25 +9,51 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="414dp"
-        android:layout_height="239dp"
+        android:layout_width="299dp"
+        android:layout_height="111dp"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.025" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Birşeyler"
+        android:layout_width="374dp"
+        android:layout_height="114dp"
+        android:text="BrainSoup Web Asistanı olarak doktorların iş yoğunluklarına yardımcı olmak ve hastalarının erken tanı sisteminden faydalanabilmesi için yapay zeka sistemi geliştirdik.Geliştirdiğimiz yapay zeka sistemi yardımıyla sizlere en iyi sağlık hizmetini sunmaktan onur duyarız  ."
+        android:textColor="#FF0075D5"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.435" />
+        app:layout_constraintVertical_bias="0.24" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="369dp"
+        android:layout_height="86dp"
+        android:text=" Uğur Ilgın Tarafından Namık Kemal Üniversitesi Bilgisayar Mühendisliği 2020/2021 Eğitim Öğretim Yılı Lisans Bitirme Projesi Olarak Geliştirilmiştir.Detaylı Bilgi İçin ugurilgin94@gmail.com Mail Hesabına Mail Gönderebilirsiniz."
+        android:textColor="#FF0075D5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.947" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="387dp"
+        android:layout_height="294dp"
+        android:src="@drawable/beyin_tumoru"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.659" />
 </androidx.constraintlayout.widget.ConstraintLayout>

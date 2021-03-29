@@ -32,6 +32,6 @@
         android:id="@+id/namelabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hoşgeldiniz, XXX"
+        android:text=""
         android:textColor="#050505" />
 </LinearLayout>

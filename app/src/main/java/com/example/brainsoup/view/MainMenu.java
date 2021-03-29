@@ -3,23 +3,15 @@ package com.example.brainsoup.view;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.Menu;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.brainsoup.HomeMenu;
 import com.example.brainsoup.MRPredict;
 import com.example.brainsoup.MRView;
-import com.example.brainsoup.PatientAdd;
 import com.example.brainsoup.PatientView;
 import com.example.brainsoup.R;
 import com.example.brainsoup.UnsavedMR;
-import com.example.brainsoup.UpdateProfile;
-import com.example.brainsoup.model.LoginInfo;
-import com.example.brainsoup.model.LoginModel;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
@@ -58,7 +50,10 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         navigationView.setNavigationItemSelectedListener(this);
-
+        HomeMenu first=new HomeMenu();
+        FragmentManager fragmentManager=getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.fragment,first).commit();
+getSupportActionBar().setTitle("BrainSoup Mobile App");
 
     }
 
@@ -80,10 +75,11 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
     int id=item.getItemId();
         name=findViewById(R.id.namelabel);
-        name.setText("Login");
+        Intent intents = getIntent();
+        String myuserName = intents.getStringExtra("UserName");
+        name.setText("Hoşgeldiniz,"+myuserName);
         if(id==R.id.home)
         {
-
             setTitle("Profili Düzenle");
             HomeMenu first=new HomeMenu();
             FragmentManager fragmentManager=getSupportFragmentManager();
@@ -115,8 +111,15 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
     }
         if(id==R.id.addPatient)
         {
+            Intent intentpat = getIntent();
             setTitle("Profili Düzenle");
+            String userEmail = intentpat.getStringExtra("UserEmail");
+            String userKey = intentpat.getStringExtra("UserKey");
+            Bundle bundlepat=new Bundle();
+            bundlepat.putString("UserEmail", userEmail);
+            bundlepat.putString("UserKey", userKey);
             PatientAdd first=new PatientAdd();
+            first.setArguments(bundlepat);
             FragmentManager fragmentManager=getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.fragment,first).commit();
         }
@@ -147,8 +150,17 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
         if(id==R.id.unsavedMR)
         {
 
+
+            Intent intentunsaved = getIntent();
+            String userKey = intentunsaved.getStringExtra("UserKey");
+            Bundle bundleunsaved=new Bundle();
+
+            bundleunsaved.putString("UserKey", userKey);
+
             setTitle("Profili Düzenle");
             UnsavedMR first=new UnsavedMR();
+            first.setArguments(bundleunsaved);
+
             FragmentManager fragmentManager=getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.fragment,first).commit();
         }

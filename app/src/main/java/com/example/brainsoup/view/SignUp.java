@@ -82,7 +82,7 @@ public class SignUp extends AppCompatActivity {
     }
     public  void Submit(View view)
     {
-        Log.d("host adı", MyURL.getBASE_URL());
+
         email=(EditText)findViewById(R.id.email2);
         password=(EditText)findViewById(R.id.password2);
         name=(EditText)findViewById(R.id.name);

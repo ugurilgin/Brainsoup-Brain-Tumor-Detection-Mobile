@@ -82,8 +82,9 @@
         android:layout_height="49dp"
         android:ems="10"
         android:hint="Hastanın TC Nosu"
-        android:inputType="textPassword"
+        android:inputType="number"
         android:textColor="#FF0075D5"
+        android:maxLength="11"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -106,14 +107,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.315" />
 
-    <EditText
+    <br.com.sapereaude.maskedEditText.MaskedEditText
         android:id="@+id/patientUDate"
         android:layout_width="296dp"
         android:layout_height="49dp"
         android:ems="10"
-        android:hint="Doğum Tarihi"
+        android:hint="2021-12-30"
         android:inputType="date"
         android:textColor="#FF0075D5"
+
+        app:mask="####-##-##"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"

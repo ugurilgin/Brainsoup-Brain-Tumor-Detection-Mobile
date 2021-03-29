@@ -15,10 +15,10 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <ImageView
         android:id="@+id/normalImg"
@@ -27,48 +27,50 @@
         android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23" />
+        app:layout_constraintVertical_bias="0.184" />
 
     <ImageView
         android:id="@+id/tumorImg"
         android:layout_width="296dp"
-        android:layout_height="132dp"
+        android:layout_height="155dp"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.515" />
+        app:layout_constraintVertical_bias="0.559" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/unsavedspinner"
         android:layout_width="296dp"
-        android:layout_height="46dp"
+        android:layout_height="50dp"
+        android:textColor="#FF0075D5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.744" />
+        app:layout_constraintVertical_bias="0.753" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/unsavedtc"
         android:layout_width="288dp"
         android:layout_height="41dp"
         android:ems="10"
         android:hint="Hastanın TC Kimlik No"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:inputType="number"
+        android:maxLength="11"
+        android:textColor="#FF0075D5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.836" />
+        app:layout_constraintVertical_bias="0.841" />
 
     <Button
         android:id="@+id/UnsavedSubmit"
@@ -77,10 +79,10 @@
         android:text="Kaydet"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.951" />
+        app:layout_constraintVertical_bias="0.957" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
